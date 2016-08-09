@@ -17,6 +17,8 @@ Based on these results we can recommend related resources.
 
 (3). Use IP address to trace user locations, so that some location-based decision could be taken.
 
+(4). Add plots(matplotlib) to details the result
+
 
 ###How to run
 ./spark-submit --py-files apache_access_log.py spark_log_analyzer.py access_log
