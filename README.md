@@ -11,7 +11,9 @@ Based on these results we can recommend related resources.
 
 
 ####TODO
-(1). Find endpoints that are being accessed most
-(2). Find enpoints that are being accessed most per user
+(1). Find endpoints that are being accessed most.
+
+(2). Find enpoints that are being accessed most per user.
+
 (3). Use IP address to trace user locations, so that some location-based decision could be taken.
 
