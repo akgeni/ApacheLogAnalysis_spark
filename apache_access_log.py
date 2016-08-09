@@ -9,6 +9,9 @@ APACHE_ACCESS_LOG_PATTERN = '^(\S+) (\S+) (\S+) \[([\w:/]+\s[+\-]\d{4})\] "(\S+)
 # Returns a dictionary containing the parts of the Apache Access Log.
 def parse_apache_log_line(logline):
     match = re.search(APACHE_ACCESS_LOG_PATTERN, logline)
+    # Handle the case when not able parse the log line
+
+    # Need a better regular expression here.
     if match is None:
         return Row(
         ip_address    = '',
