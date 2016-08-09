@@ -10,10 +10,8 @@ Log Analysis can yield some insight like, what all resources a user is accessing
 Based on these results we can recommend related resources.
 
 
-
-TODO : find endpoints that are being accessed most
-
-TODO : find enpoints that are being accessed most per user
-
-TODO : use IP address to trace user locations, so that some location-based decision could be taken.
+####TODO
+(1). Find endpoints that are being accessed most
+(2). Find enpoints that are being accessed most per user
+(3). Use IP address to trace user locations, so that some location-based decision could be taken.
 
