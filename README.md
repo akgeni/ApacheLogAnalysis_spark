@@ -1,6 +1,6 @@
 # ApacheLogAnalysis_spark
 
-Log analysis can open door all sort of business intelligence. like 
+Log analysis can open door to all sort of business intelligence. like 
 
 ###Price Optimzation -
 
