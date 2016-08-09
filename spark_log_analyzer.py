@@ -17,8 +17,8 @@ access_logs = (sc.textFile(inputLogFile)
 
 # Lets find all content size
 content_sizes = access_logs.map(lambda logLine: logLine.content_size).cache()
-print "\n"
-print "Anshu Content size avg %i, Min: %i, Max: %s" % (
+
+print "Content size avg %i, Min: %i, Max: %s" % (
        content_sizes.reduce(lambda a, b : a+b) / content_sizes.count(),
        content_sizes.min(),
        content_sizes.max()
@@ -28,14 +28,15 @@ print "Anshu Content size avg %i, Min: %i, Max: %s" % (
 top_ips = (access_logs.map(lambda logLine: (logLine.ip_address, 1))
                       .reduceByKey(lambda a, b: a + b)
                       .cache())
-print "Anshu: top 10 ips  ", top_ips.takeOrdered(10, lambda x: -x[1])
+print "top 10 ips  ", top_ips.takeOrdered(10, lambda x: -x[1])
 
 
-# status list
+
+# response code returned by server
 response_codes = (access_logs.map(lambda logLine: (logLine.response_code, 1))
                             .reduceByKey(lambda x, y: x + y))
 
-print 'Anshu status_codes ', response_codes.collect()
+print 'status_codes ', response_codes.collect()
 # top endPoints
 top_end_points = ''
 
