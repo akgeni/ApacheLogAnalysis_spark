@@ -22,7 +22,6 @@ def parse_apache_log_line(logline):
         content_size  = long(0)
         )
     else:
-
         return Row(
         ip_address    = match.group(1),
         client_identd = match.group(2),
